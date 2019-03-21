@@ -4,4 +4,5 @@ if [[ -z ${SCS_SSH_PRIVATEKEY} ]]; then
 else
     export CURR_SSH_COMMAND="${SCS_SSH_PATH} ${SCS_SSH_OTHER_OPTIONS} -i ${SCS_KEYS_DIR}${SCS_SSH_PRIVATEKEY} ${SCS_SSH_USERNAME}@${SCS_SSH_SERVER}"
 fi
-bash -c '${CURR_SSH_COMMAND} ; ${SHELL}'
+${CURR_SSH_COMMAND}
+${SHELL} --rcfile $(dirname $0)/bashrc

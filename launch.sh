@@ -17,15 +17,14 @@ case $key in
     ;;
 esac
 done
-cd $(dirname $0)
-. ./config.sh
+. $(dirname $0)/config.sh
 if [[ ! -v SCS_SSH_PATH ]] && [[ ! -v SCS_FILEZILLA_PATH ]]; then
     echo "Missing variables! Please setup a config.sh"
     exit 1
 fi
 
 if [[ ${RUN_FILEZILLA} = true ]]; then
-    ./filezilla.sh
+    $(dirname $0)/filezilla.sh
 else
-    ./ssh.sh
+    $(dirname $0)/ssh.sh
 fi
