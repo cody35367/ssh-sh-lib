@@ -1,4 +1,7 @@
 #!/bin/bash
+if [[ ${SCS_VERBOSE_MODE} = true ]]; then
+    set -x
+fi
 if [[ -z ${SCS_SSH_PRIVATEKEY} ]]; then
     nohup "${SCS_FILEZILLA_PATH}" -l ask ${SCS_FILEZILLA_PROTOCOL}://${SCS_SSH_USERNAME}@${SCS_SSH_SERVER} &> /dev/null &
 else

@@ -11,6 +11,10 @@ case $key in
     RUN_FILEZILLA=true
     shift # move pass argument
     ;;
+    -x)
+    export SCS_VERBOSE_MODE=true
+    shift # move pass argument
+    ;;
     *)    # unknown option
     echo "Invalid option '$key' supplied."
     exit 1
