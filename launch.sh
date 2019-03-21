@@ -11,7 +11,7 @@ case $key in
     RUN_FILEZILLA=true
     shift # move pass argument
     ;;
-    -x)
+    -x|-v|--verbose)
     export SCS_VERBOSE_MODE=true
     shift # move pass argument
     ;;
