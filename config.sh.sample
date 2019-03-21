@@ -1,0 +1,4 @@
+#!/bin/bash
+export SCS_SSH_PATH="ssh"
+export SCS_FILEZILLA_PATH="filezilla"
+export SCS_KEYS_DIR="../keys/"
